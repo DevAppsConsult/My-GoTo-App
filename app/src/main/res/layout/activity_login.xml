@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mainLayout"
+    android:layout_height="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingTop="40dp"
+    android:background="@drawable/main_back"
+    tools:context="com.mygotoservices.mygotoandroid.LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/introLinearLayout"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/login_image_copy"
+            android:layout_height="160dp" />
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/loginUsernameETLayout"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/introLinearLayout"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/loginUsernameET"
+        android:layout_width="match_parent"
+        android:drawableTintMode="add"
+        android:inputType="textPersonName|textEmailAddress"
+        android:hint= "Email Address"
+        android:background="@drawable/edit_text_rounded_left"
+        android:drawableLeft="@drawable/login_user_text_light"
+        android:drawableStart="@drawable/login_user_text_light"
+        android:drawablePadding="10dp"
+        android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/loginPasswordETLayout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/loginUsernameETLayout"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/loginPasswordET"
+        android:layout_width="match_parent"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_text_rounded_left"
+        android:drawableStart="@drawable/login_user_password_image"
+        android:drawablePadding="10dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/login_user_password_image" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_button"
+        android:text="Login"
+        android:textColor="@color/viewBg"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/loginBtn"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/loginPasswordETLayout"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        android:id="@+id/endLinear"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/loginRegisterTV"
+            android:layout_weight="1"
+            android:textColor="@color/viewBg"
+            android:textAlignment="center"
+            android:text="Don't have an account ?"
+            android:textStyle="italic|bold"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/loginForgotTV"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/viewBg"
+            android:text="Forgotten your password?"
+            android:textAlignment="center"
+            android:textStyle="italic|bold"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/endLinear"
+        android:layout_marginTop="20dp"
+        android:layout_height="0.5dp">
+    </View>
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/pinImage"
+        android:src="@drawable/icons8_attach_default"
+        android:layout_height="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/dateTime"
+        android:text="Date Time : "
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="150dp"
+        android:id="@+id/initView"
+        app:layout_constraintTop_toBottomOf="@+id/pinImage"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/tumblr_grey"
+        android:layout_height="1dp">
+    </View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initView"
+        android:id="@+id/information"
+        android:text="Date Time : "
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/information"
+        android:layout_marginTop="5dp"
+        android:background="@color/tumblr_grey"
+        android:layout_height="1dp">
+
+    </View>
+</android.support.constraint.ConstraintLayout>

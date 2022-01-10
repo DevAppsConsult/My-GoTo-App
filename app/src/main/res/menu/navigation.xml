@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/mygoto_app_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/services"
+        android:icon="@drawable/mygoto_app_services"
+        android:title="Services" />
+
+    <item
+        android:id="@+id/market"
+        android:icon="@drawable/notif_copy"
+        android:title="Notifications" />
+
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/mygoto_app_account"
+        android:title="Account" />
+
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/mygoto_app_more"
+        android:title="More" />
+
+</menu>

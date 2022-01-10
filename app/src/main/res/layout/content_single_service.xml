@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mygotoservices.mygotoandroid.SingleServiceActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_single_service">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+       <ImageView
+           android:id="@+id/thumbnail"
+           android:layout_width="0dp"
+           android:layout_weight="2.5"
+           android:scaleType="fitXY"
+           android:src="@drawable/goicon"
+           android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/visibleName"
+                android:textStyle="bold"
+                android:text="My Visible Name"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:text="My Category Name"
+                android:id="@+id/categoryName"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:text="My Location Name"
+                android:layout_width="match_parent"
+                android:id="@+id/locationName"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="My Other Info"
+                android:layout_width="match_parent"
+                android:id="@+id/otherInformation"
+                android:textStyle="italic"
+                android:layout_height="wrap_content" />
+            <RatingBar
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:numStars="5"
+                android:id="@+id/currentRating"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="30dp"
+                android:background="@drawable/icons8_heart_outline_100"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/likeBtn"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2.2"
+        android:layout_height="0dp">
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/currentRate"
+            android:text="Rate: 30GhC per hour"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/currentRate"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/scheduledBtn"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:text="Schedule An Appointment"
+                android:background="@drawable/rounded_button"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+    <com.mygotoservices.mygotoandroid.Misc.RecyclerViewEmptySupport
+        android:id="@+id/picturesRecycler"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:scrollbars="horizontal"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+    </com.mygotoservices.mygotoandroid.Misc.RecyclerViewEmptySupport>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+    </View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:text="Customer reviews :"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+    <com.mygotoservices.mygotoandroid.Misc.RecyclerViewEmptySupport
+        android:id="@+id/commentsRecycler"
+        android:layout_width="match_parent"
+        android:layout_weight="4"
+        android:scrollbars="vertical"
+        android:layout_height="0dp">
+    </com.mygotoservices.mygotoandroid.Misc.RecyclerViewEmptySupport>
+
+</LinearLayout>

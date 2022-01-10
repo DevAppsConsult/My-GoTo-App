@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="13dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingRight="5dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="Sub-Total"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="0dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/subTotal"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:text="0 GhC"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold"
+                        android:layout_height="0dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent">
+
+                </View>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:paddingLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:text="Delivery Cost"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="0dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/deliveryCost"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:text="0 GhC"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold"
+                        android:layout_height="0dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent">
+
+                </View>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:paddingLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:text="Total"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="0dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/totalCost"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:text="0 GhC"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold"
+                        android:layout_height="0dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/checkoutNow"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:text="Checkout Now"
+                    android:background="@drawable/rounded_button"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/emptyCart"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/white"
+                    android:text="Empty Cart"
+                    android:background="@drawable/rounded_button"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

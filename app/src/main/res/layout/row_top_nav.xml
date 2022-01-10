@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/freeServiceBtn"
+            android:layout_width="70dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button1"
+            android:drawableTop="@drawable/next_50"
+            android:layout_height="70dp" />
+        <TextView
+            android:text="Free Services"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button2"
+            android:drawableTop="@drawable/gift_50"
+            android:id="@+id/dailyOfferBtn"
+            android:layout_height="70dp" />
+        <TextView
+            android:text="Daily Offers"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/bestPersonBtn"
+            android:background="@drawable/button3"
+            android:drawableTop="@drawable/person_50"
+
+            android:layout_height="70dp" />
+        <TextView
+            android:text="Best Pers.."
+            android:lines="1"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button4"
+            android:drawableTop="@drawable/play_50"
+            android:id="@+id/playWinBtn"
+            android:layout_height="70dp" />
+        <TextView
+            android:text="Play &amp; Win"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

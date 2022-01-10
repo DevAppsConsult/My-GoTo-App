@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/icons8_truck_100"
+        android:id="@+id/imageView"
+        android:layout_height="80dp" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Delivery Method"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/shippingInformation"
+        android:layout_height="wrap_content" />
+
+    <View
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/shippingInformation"
+        android:layout_marginTop="5dp"
+        android:id="@+id/initView"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+
+    <worker8.com.github.radiogroupplus.RadioGroupPlus
+        android:id="@+id/radio_group_plus"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/initView"
+        android:layout_weight="5"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/locationDeliveryRadioBtn"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="match_parent">
+            </View>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/locationDeliveryTV"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Location Delivery"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/personalPickBtn"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="match_parent">
+            </View>
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:id="@+id/personalPickTV"
+                android:textStyle="bold"
+                android:text="Personal Pick Up"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </worker8.com.github.radiogroupplus.RadioGroupPlus>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_search_btn"
+        android:text="Proceed To Payment"
+        android:textColor="@color/viewBg"
+        android:id="@+id/deliveryMethodBtn"
+        android:textSize="16sp"
+        android:textStyle="italic|bold"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/radio_group_plus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryMethodBtn"
+        android:layout_marginTop="5dp"
+        android:layout_height="20dp">
+    </View>
+
+</android.support.constraint.ConstraintLayout>

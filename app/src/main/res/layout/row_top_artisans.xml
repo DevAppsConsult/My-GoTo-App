@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_marginTop="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/full_logo"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/album_cover_height"
+                android:layout_height="match_parent"
+                android:layout_below="@id/thumbnail"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                android:textStyle="bold"
+                android:fontFamily="@font/bold"
+                android:text="Name"
+                android:paddingTop="@dimen/album_title_padding"
+                android:lines="1"
+                android:textColor="@color/album_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/thumbnail"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:gravity="start" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/album_cover_height"
+                app:layout_constraintLeft_toRightOf="@id/thumbnail"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:id="@+id/artisanName"
+                android:lines="2"
+                android:fontFamily="@font/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:textAlignment="viewStart"
+                android:layout_below="@id/title"
+                android:paddingBottom="@dimen/songs_count_padding_bottom"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                android:textSize="12sp"
+                android:gravity="start" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/album_cover_height"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/artisanName"
+                android:id="@+id/ordersRatings"
+                android:paddingBottom="@dimen/songs_count_padding_bottom"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                android:orientation="horizontal"
+                >
+
+                <RatingBar
+                    android:id="@+id/currentRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:stepSize="0.1"
+                    />
+
+                <TextView
+                    android:id="@+id/currentRatingNumber"
+                    android:lines="1"
+                    android:layout_marginLeft="5dp"
+                    android:text="Yea"
+                    android:fontFamily="@font/condit"
+                    android:textAlignment="viewStart"
+                    android:layout_below="@id/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:gravity="start" />
+
+                <TextView
+                    android:id="@+id/currentOrder"
+                    android:lines="1"
+                    android:text="Yea"
+                    android:textAlignment="viewEnd"
+                    android:layout_below="@id/title"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/condit"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/album_title"
+                android:layout_height="0.5dp">
+
+            </View>
+        </android.support.constraint.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

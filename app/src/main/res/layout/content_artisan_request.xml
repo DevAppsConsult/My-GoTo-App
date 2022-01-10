@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mygotoservices.mygotoandroid.ArtisanRequestActivity"
+    tools:showIn="@layout/activity_artisan_request">
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/visibleName0"
+        android:textStyle="bold"
+        android:text="Send A Request"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="50dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/visibleName0"
+        android:id="@+id/firstView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp">
+    </View>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/visibleName1"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/firstView"
+
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/visibleName"
+            android:layout_width="match_parent"
+            android:hint="Visible Name"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/pickLocation1"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/location1"
+
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:textSize="20sp"
+            android:id="@+id/textId"
+            android:textStyle="bold"
+            android:text="Kindly select your location"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@drawable/icons8_place_marker_100"
+            android:layout_width="50dp"
+            android:id="@+id/pickLocation"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/location1"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/visibleName1"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:hint="Location"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/landMark1"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/pickLocation1"
+
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/landMark"
+            android:layout_width="match_parent"
+            android:hint="Landmark"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/description1"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/landMark1"
+
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/description"
+            android:lines="5"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:hint="Description of your service"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:gravity="top"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_button"
+        android:text="Submit Request"
+        android:textColor="@color/viewBg"
+        android:id="@+id/loginBtn"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/description1"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

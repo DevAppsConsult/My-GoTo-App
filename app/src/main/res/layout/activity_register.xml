@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:id="@+id/linearLayout"
+    android:background="@drawable/main_back"
+    tools:context="com.mygotoservices.mygotoandroid.RegisterActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/introLinearLayout"
+        android:orientation="horizontal"
+        android:layout_weight="1.5"
+        android:layout_height="0dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/viewBg"
+            android:layout_gravity="center_vertical"
+            android:layout_height="1dp">
+
+        </View>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/customer_service"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="0dp"
+            android:background="@color/viewBg"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="1dp">
+
+        </View>
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registerNameETLayout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/introLinearLayout"
+        android:layout_height="0dp"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/registerNameET"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icons_user_35"
+            android:background="@drawable/rounded_edit_text"
+
+            android:drawableStart="@drawable/icons_user_35"
+            android:inputType="textPersonName|textEmailAddress"
+            android:hint="Full Name"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registerEmailLayout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/registerNameETLayout"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icons_mail_35"
+            android:drawableStart="@drawable/icons_mail_35"
+            android:background="@drawable/rounded_edit_text"
+            android:inputType="textPersonName|textEmailAddress"
+            android:hint="Email Address"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="0dp"        >
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:ccp_showFullName="false"
+            app:ccp_showPhoneCode="true"
+            app:ccp_countryPreference="gh"
+            android:gravity="center_vertical"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
+            app:ccp_rememberLastSelection="true"
+            app:ccp_showNameCode="false"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ccp"
+                android:hint="Phone Number"
+                android:id="@+id/phoneText"
+                android:background="@drawable/rounded_edit_text"
+                android:inputType="phone"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registerPasswordETLayout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/registerEmailLayout"
+        android:layout_height="wrap_content"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/registerPasswordET"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icons_lock_35"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edit_text"
+            android:drawableStart="@drawable/icons_lock_35"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/registerConfirmPasswordETLayout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/registerPasswordETLayout"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        >
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/registerConfirmPasswordET"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/icons_lock_35"
+        android:hint="Confirm Password"
+        android:background="@drawable/rounded_edit_text"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/icons_lock_35"
+        android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_button"
+        android:text="Register"
+        android:textColor="@color/viewBg"
+        android:id="@+id/registerBtn"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordETLayout"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@id/registerBtn"
+        android:layout_width="match_parent"
+        android:textColor="@color/viewBg"
+        android:id="@+id/toLoginTV"
+        android:textAlignment="center"
+        android:text="Already have an account ?"
+        android:textStyle="italic|bold"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+</LinearLayout>
+

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_edit_text"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:layout_weight="1">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:text="MyGoTo Booking"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+
+        android:layout_weight="1"
+        android:src="@drawable/hubtel_payment_straight"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Min Charge :"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/pricePerSession"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="1"
+            android:lines="1"
+            android:paddingLeft="5dp"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Choose a payment method"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="150dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="1dp">
+        </View>
+
+        <worker8.com.github.radiogroupplus.RadioGroupPlus
+            android:id="@+id/radio_group_plus"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:id="@+id/cashPayment"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="match_parent">
+                    </View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/cashPaymentText"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="Cash Payment"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/mobileMoneyPayment"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:id="@+id/mobileMoneyPaymentText"
+                    android:textStyle="bold"
+                    android:text="Mobile Money Payment"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </worker8.com.github.radiogroupplus.RadioGroupPlus>
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/scheduledBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Request Estimate"
+            android:background="@drawable/rounded_button"
+            android:layout_height="wrap_content" />
+</LinearLayout>
+
+</LinearLayout>
